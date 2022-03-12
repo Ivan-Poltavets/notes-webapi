@@ -21,7 +21,7 @@ namespace Notes.Tests.Notes.Commands
                 Id = NotesContextFactory.NoteIdForUpdate,
                 UserId = NotesContextFactory.UserBId,
                 Title = updatedTitle
-            },CancellationToken.None);
+            }, CancellationToken.None);
 
             Assert.NotNull(await Context.Notes.SingleOrDefaultAsync(note => note.Id == NotesContextFactory.NoteIdForUpdate
             && note.Title == updatedTitle));

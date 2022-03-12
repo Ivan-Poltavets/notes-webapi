@@ -13,7 +13,6 @@ namespace Notes.Tests
     {
         public static Guid UserAId = Guid.NewGuid();
         public static Guid UserBId = Guid.NewGuid();
-
         public static Guid NoteIdForDelete = Guid.NewGuid();
         public static Guid NoteIdForUpdate = Guid.NewGuid();
 
@@ -41,7 +40,7 @@ namespace Notes.Tests
                     EditDate = null,
                     Id = Guid.Parse("429f6347-3d70-4d67-9b07-426cb5fbe3ad"),
                     Title = "TItle2",
-                    UserId= UserBId
+                    UserId = UserBId
                 },
                 new Note
                 {

@@ -4,7 +4,7 @@ using Notes.Domain;
 
 namespace Notes.Application.Notes.Commands
 {
-    public class CreateNoteCommandHandler : IRequestHandler<CreateNoteCommand,Guid>
+    public class CreateNoteCommandHandler : IRequestHandler<CreateNoteCommand, Guid>
     {
         private readonly INotesDbContext _dbContext;
 
@@ -12,7 +12,8 @@ namespace Notes.Application.Notes.Commands
         {
             _dbContext = dbContext;
         }
-        public async Task<Guid> Handle(CreateNoteCommand request,CancellationToken cancellationToken)
+
+        public async Task<Guid> Handle(CreateNoteCommand request, CancellationToken cancellationToken)
         {
             var note = new Note
             {

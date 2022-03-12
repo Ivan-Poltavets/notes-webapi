@@ -13,6 +13,7 @@ namespace Notes.WebAPI.Controllers
     public class NoteController : BaseController
     {
         private readonly IMapper _mapper;
+
         public NoteController(IMapper mapper)
         {
             _mapper = mapper;
@@ -49,6 +50,7 @@ namespace Notes.WebAPI.Controllers
             var noteId = await Mediator.Send(command);
             return Ok(noteId);
         }
+
         [HttpPut]
         public async Task<IActionResult> Update([FromBody] UpdateNoteDto updateNoteDto)
         {

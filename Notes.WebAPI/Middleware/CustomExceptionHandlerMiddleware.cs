@@ -26,7 +26,7 @@ namespace Notes.WebAPI.Middleware
                 await HandleExceptionAsync(context, ex);
             }
         }
-        
+
         private Task HandleExceptionAsync(HttpContext context, Exception ex)
         {
             var code = HttpStatusCode.InternalServerError;
@@ -43,11 +43,10 @@ namespace Notes.WebAPI.Middleware
             }
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)code;
-            if(result == string.Empty)
+            if (result == string.Empty)
             {
                 result = JsonSerializer.Serialize(new { error = ex.Message });
             }
-
             return context.Response.WriteAsync(result);
         }
     }

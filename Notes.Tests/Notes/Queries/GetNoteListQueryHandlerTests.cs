@@ -27,7 +27,7 @@ namespace Notes.Tests.Notes.Queries
         [Fact]
         public async void GetNoteListQueryHandler_Success()
         {
-            var handler = new GetNoteListQueryHandler(Context,Mapper);
+            var handler = new GetNoteListQueryHandler(Context, Mapper);
             var result = await handler.Handle(
                 new GetNoteListQuery
                 {

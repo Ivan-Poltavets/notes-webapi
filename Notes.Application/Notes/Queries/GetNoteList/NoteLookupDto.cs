@@ -16,11 +16,11 @@ namespace Notes.Application.Notes.Queries.GetNoteList
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<Note,NoteLookupDto>()
-                .ForMember(noteDto=> noteDto.Id,
-                opt=>opt.MapFrom(note=>note.Id))
-                .ForMember(noteDto=> noteDto.Title,
-                opt=>opt.MapFrom(note=>note.Title));
+            profile.CreateMap<Note, NoteLookupDto>()
+                .ForMember(noteDto => noteDto.Id,
+                opt => opt.MapFrom(note => note.Id))
+                .ForMember(noteDto => noteDto.Title,
+                opt => opt.MapFrom(note => note.Title));
         }
     }
 }

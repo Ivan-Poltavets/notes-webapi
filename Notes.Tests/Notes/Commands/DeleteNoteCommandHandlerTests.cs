@@ -49,7 +49,7 @@ namespace Notes.Tests.Notes.Commands
                     Title = "NoteTitle",
                     Details = "Note details",
                     UserId = NotesContextFactory.UserAId,
-                },CancellationToken.None);
+                }, CancellationToken.None);
 
             await Assert.ThrowsAsync<NotFoundException>(async () =>
             await deleteHandler.Handle(
